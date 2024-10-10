@@ -3,6 +3,7 @@ import "./Contact.css";
 import contact from "../Assets/Images/Contact.jpg";
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const Contact = () => {
   const [name, setName] = useState("");
