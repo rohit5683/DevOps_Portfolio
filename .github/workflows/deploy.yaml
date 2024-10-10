@@ -22,13 +22,16 @@ jobs:
         node-version: 20.9.0
 
     - name: Install dependencies
-      run: npm install --legacy-peer-deps # Install all dependencies, including axios
+      run: npm install --legacy-peer-deps
 
     - name: Update Browserslist DB
-      run: npx update-browserslist-db@latest # Ensures Browserslist is up-to-date
+      run: npx update-browserslist-db@latest --force
+
+    - name: Install caniuse-lite
+      run: npm install caniuse-lite
 
     - name: Build Project
-      run: npm run build # Builds the project
+      run: npm run build
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.0
