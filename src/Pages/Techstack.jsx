@@ -2,7 +2,7 @@ import React from "react";
 import "./Techstack.css";
 import { TechstackList } from "../Utiles/TechstackList";
 import RubberBand from "react-reveal/RubberBand";
-// import Fade from "react-reveal/Fade";
+import Fade from "react-reveal/Fade";
 
 const Techstack = () => {
   return (
