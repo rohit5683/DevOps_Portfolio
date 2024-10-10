@@ -22,13 +22,13 @@ jobs:
         node-version: 20.9.0
 
     - name: Install dependencies
-      run: npm install --legacy-peer-deps # Corrected case
+      run: npm install --legacy-peer-deps # Install all dependencies, including axios
 
-    - name: update browser list
-      run: npx update-browserslist-db@latest # Corrected case
+    - name: Update Browserslist DB
+      run: npx update-browserslist-db@latest # Ensures Browserslist is up-to-date
 
     - name: Build Project
-      run: npm run build # Fixed syntax
+      run: npm run build # Builds the project
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.0
