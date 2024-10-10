@@ -6,8 +6,8 @@ import Cv from "../Assets/Docs/Rohit Vishwakarma.pdf";
 import DevImage from "../../src/Assets/Images/Home.png";
 import { CiLight } from "react-icons/ci";
 import { CiDark } from "react-icons/ci";
-import Zoom from "react-reveal/Zoom";
-import Bounce from "react-reveal/Bounce";
+// import Zoom from "react-reveal/Zoom";
+// import Bounce from "react-reveal/Bounce";
 
 const Home = () => {
   const [theme, setTheme] = useTheme();

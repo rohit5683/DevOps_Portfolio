@@ -2,7 +2,7 @@ import "./Projects.css";
 import project_1 from "../../src/Assets/Images/Project_1.png";
 import project_2 from "../../src/Assets/Images/Project_2.png";
 import project_3 from "../../src/Assets/Images/Project_3.png";
-import Fade from "react-reveal/Fade";
+// import Fade from "react-reveal/Fade";
 
 import React from "react";
 
