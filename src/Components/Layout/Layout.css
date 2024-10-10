@@ -1,0 +1,41 @@
+.sidebar-section {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+}
+
+.sidebar {
+  height: 100vh;
+  background-color: #1e1e2c;
+  width: 50px;
+  position: fixed;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.sidebar-toggle {
+  width: 200px;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.sidebar-toggle-icons {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  cursor: pointer;
+}
+
+.sidebar-toggle-icons p svg {
+  background-color: chartreuse;
+  color: white;
+  margin-top: 30px;
+}
+
+/* mobile view */
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}

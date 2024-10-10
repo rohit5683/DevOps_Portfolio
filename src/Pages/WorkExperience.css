@@ -1,0 +1,28 @@
+.workexp {
+  margin: 50px 0px;
+  margin-left: 120px;
+  height: 100vh;
+  padding-left: 110px;
+}
+.workexp hr {
+  color: #138781;
+  width: 400px;
+  margin: 10px auto;
+}
+
+.workexp h1 {
+  text-align: center;
+  color: #138781;
+  font-weight: 600;
+}
+
+/*Mobile View */
+@media (max-width: 600px) {
+  .workexp {
+    margin: 0px 0px;
+    margin-left: 20px;
+    padding-left: 0px;
+    margin-top: 900px;
+    height: 0vh;
+  }
+}

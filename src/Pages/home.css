@@ -1,0 +1,78 @@
+.home-container {
+  height: 100vh;
+  color: white;
+}
+.home-content img {
+  height: 300px;
+  margin-left: 120px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home-content h1 {
+  padding: 10px;
+  padding-top: 80px;
+  margin-left: 120px;
+}
+
+.home-button {
+  margin-left: 120px;
+}
+.home-button .btn-hire {
+  background-color: rgba(172, 255, 47, 0.815);
+  color: white;
+  font-weight: 600;
+  width: 150px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.home-button .btn-cv {
+  background-color: orange;
+  color: white;
+  font-weight: 600;
+  width: 150px;
+  border-radius: 10px;
+}
+.home-button .btn-hire:hover {
+  background-color: rgba(255, 47, 151, 0.726);
+  color: rgb(255, 255, 255);
+  transition: all;
+  transition-duration: 1s;
+}
+.home-button .btn-cv:hover {
+  background-color: rgba(255, 0, 170, 0.74);
+  color: rgb(255, 255, 255);
+  transition: all;
+  transition-duration: 1s;
+}
+
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: #1e1e1e;
+  margin-top: 10px;
+  text-align: center;
+  position: fixed;
+  right: 0px;
+  cursor: pointer;
+  color: greenyellow;
+  z-index: 1;
+  border-radius: 10px 0px 0px 10px;
+  transition: all 1s ease;
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .home-container {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 30px;
+    height: 110vh;
+  }
+  .home-container h1 {
+    font-size: 24px;
+  }
+}
