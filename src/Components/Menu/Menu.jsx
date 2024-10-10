@@ -8,68 +8,76 @@ import { PiStudentDuotone } from "react-icons/pi";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import Profile from "../../Assets/Images/Profile.png";
 import { Link } from "react-scroll";
-import Zoom from "react-reveal/Zoom";
-import Fade from "react-reveal/Fade";
+import { useSpring, animated } from "@react-spring/web"; // Import react-spring
 
 const Menu = ({ toggle }) => {
+  // Define spring animations for profile and navbar
+  const profileSpring = useSpring({
+    from: { opacity: 0, transform: 'translateY(-20px)' },
+    to: { opacity: toggle ? 1 : 0, transform: toggle ? 'translateY(0)' : 'translateY(-20px)' },
+    config: { duration: 500 },
+  });
+
+  const navbarSpring = useSpring({
+    from: { opacity: 0, transform: 'translateY(-20px)' },
+    to: { opacity: toggle ? 1 : 0, transform: toggle ? 'translateY(0)' : 'translateY(-20px)' },
+    config: { duration: 500 },
+  });
+
   return (
     <>
       {toggle ? (
         <>
-          <Zoom>
-            <div className="navbar-profile-pic">
-              <img src={Profile} alt="profile pic" />
-            </div>
-          </Zoom>
-          <Fade left>
-            <div className="navbar">
-              <div className="nav-item">
-                <div className="nav-link">
-                  <Link to="home" spy={true} offset={-100} duration={100}>
-                    <AiOutlineHome size={20} />
-                    Home
-                  </Link>
-                </div>
-                <div className="nav-link">
-                  <Link to="about" spy={true} offset={-100} duration={100}>
-                    <FcAbout />
-                    About
-                  </Link>
-                </div>
-                <div className="nav-link">
-                  <Link to="education" spy={true} offset={-100} duration={100}>
-                    <PiStudentDuotone />
-                    Education
-                  </Link>
-                </div>
-                <div className="nav-link">
-                  <Link to="techstack" spy={true} offset={-100} duration={100}>
-                    <GiTechnoHeart />
-                    Tech Stack
-                  </Link>
-                </div>
+          <animated.div style={profileSpring} className="navbar-profile-pic">
+            <img src={Profile} alt="profile pic" />
+          </animated.div>
+          <animated.div style={navbarSpring} className="navbar">
+            <div className="nav-item">
+              <div className="nav-link">
+                <Link to="home" spy={true} offset={-100} duration={100}>
+                  <AiOutlineHome size={20} />
+                  Home
+                </Link>
+              </div>
+              <div className="nav-link">
+                <Link to="about" spy={true} offset={-100} duration={100}>
+                  <FcAbout />
+                  About
+                </Link>
+              </div>
+              <div className="nav-link">
+                <Link to="education" spy={true} offset={-100} duration={100}>
+                  <PiStudentDuotone />
+                  Education
+                </Link>
+              </div>
+              <div className="nav-link">
+                <Link to="techstack" spy={true} offset={-100} duration={100}>
+                  <GiTechnoHeart />
+                  Tech Stack
+                </Link>
+              </div>
 
-                <div className="nav-link">
-                  <Link to="projects" spy={true} offset={-100} duration={100}>
-                    <AiOutlineFundProjectionScreen />
-                    Projects
-                  </Link>
-                </div>
-                <div className="nav-link">
-                  <Link to="work" spy={true} offset={-100} duration={100}>
-                    <CgWorkAlt />
-                    Work Experience
-                  </Link>
-                </div>
-                <div className="nav-link">
-                  <Link to="contact" spy={true} offset={-100} duration={100}>
-                    <FcContacts />
-                    Contact
-                  </Link>
-                </div>
+              <div className="nav-link">
+                <Link to="projects" spy={true} offset={-100} duration={100}>
+                  <AiOutlineFundProjectionScreen />
+                  Projects
+                </Link>
+              </div>
+              <div className="nav-link">
+                <Link to="work" spy={true} offset={-100} duration={100}>
+                  <CgWorkAlt />
+                  Work Experience
+                </Link>
+              </div>
+              <div className="nav-link">
+                <Link to="contact" spy={true} offset={-100} duration={100}>
+                  <FcContacts />
+                  Contact
+                </Link>
               </div>
             </div>
-          </Fade>
+          </animated.div>
         </>
       ) : (
         <>
