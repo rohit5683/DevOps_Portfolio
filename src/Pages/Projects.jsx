@@ -2,11 +2,17 @@ import "./Projects.css";
 import project_1 from "../../src/Assets/Images/Project_1.png";
 import project_2 from "../../src/Assets/Images/Project_2.png";
 import project_3 from "../../src/Assets/Images/Project_3.png";
-import Fade from "react-reveal/Fade";
-
 import React from "react";
+import { useSpring, animated } from "@react-spring/web"; // Import react-spring
 
 const Projects = () => {
+  // Define the fade-in animation
+  const fadeIn = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 500 },
+  });
+
   return (
     <>
       <div className="container project" id="projects">
@@ -15,7 +21,7 @@ const Projects = () => {
         <p>Here are my top 3 Recent Project with Live links and Source Code</p>
         <div className="row" id="ads">
           <div className="col-md-4">
-            <Fade left>
+            <animated.div style={fadeIn}>
               <div className="card rounded">
                 <div className="card-image">
                   <span className="card-notify-badge"> Full Stack </span>
@@ -38,15 +44,16 @@ const Projects = () => {
                     href="https://github.com/rohit5683/Easykart"
                     className="ad-btn"
                     target="blank"
+                    rel="noopener noreferrer"
                   >
                     Source Code
                   </a>
                 </div>
               </div>
-            </Fade>
+            </animated.div>
           </div>
           <div className="col-md-4">
-            <Fade left>
+            <animated.div style={fadeIn}>
               <div className="card rounded">
                 <div className="card-image">
                   <span className="card-notify-badge"> Web App </span>
@@ -65,6 +72,7 @@ const Projects = () => {
                     href="https://rohit5683.github.io/box-office-app/"
                     className="ad-btn"
                     target="blank"
+                    rel="noopener noreferrer"
                   >
                     View
                   </a>
@@ -72,15 +80,16 @@ const Projects = () => {
                     href="https://github.com/rohit5683/box-office-app"
                     className="ad-btn"
                     target="blank"
+                    rel="noopener noreferrer"
                   >
                     Source Code
                   </a>
                 </div>
               </div>
-            </Fade>
+            </animated.div>
           </div>
           <div className="col-md-4">
-            <Fade left>
+            <animated.div style={fadeIn}>
               <div className="card rounded">
                 <div className="card-image">
                   <span className="card-notify-badge"> Web Site </span>
@@ -102,12 +111,13 @@ const Projects = () => {
                     href="https://github.com/rohit5683/techstar.github.org"
                     className="ad-btn"
                     target="blank"
+                    rel="noopener noreferrer"
                   >
                     Source Code
                   </a>
                 </div>
               </div>
-            </Fade>
+            </animated.div>
           </div>
         </div>
       </div>

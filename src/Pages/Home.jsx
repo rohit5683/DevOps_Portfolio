@@ -4,18 +4,30 @@ import "../Pages/home.css";
 import Typewriter from "typewriter-effect";
 import Cv from "../Assets/Docs/Rohit Vishwakarma.pdf";
 import DevImage from "../../src/Assets/Images/Home.png";
-import { CiLight } from "react-icons/ci";
-import { CiDark } from "react-icons/ci";
-import Zoom from "react-reveal/Zoom";
-import Bounce from "react-reveal/Bounce";
+import { CiLight, CiDark } from "react-icons/ci";
+import { useSpring, animated } from "@react-spring/web"; // Import react-spring
 
 const Home = () => {
   const [theme, setTheme] = useTheme();
 
-  //Handle Theme
+  // Handle Theme
   const handleTheme = () => {
     setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
   };
+
+  // Define the zoom-like animation
+  const zoomAnimation = useSpring({
+    from: { transform: "scale(0)" },
+    to: { transform: "scale(1)" },
+  });
+
+  // Define the bounce-like animation
+  const bounceAnimation = useSpring({
+    from: { transform: "translateX(-100%)" },
+    to: { transform: "translateX(0)" },
+    config: { tension: 170, friction: 12 },
+  });
+
   return (
     <>
       <div className="container-fluid home-container" id="home">
@@ -23,7 +35,7 @@ const Home = () => {
           {theme === "light" ? <CiDark size={30} /> : <CiLight size={30} />}
         </div>
         <div className="container home-content">
-          <Zoom right>
+          <animated.div style={zoomAnimation}>
             <h1>
               Hi, I'am a
               <Typewriter
@@ -38,8 +50,9 @@ const Home = () => {
                 }}
               />{" "}
             </h1>
-          </Zoom>
-          <Bounce right>
+          </animated.div>
+
+          <animated.div style={bounceAnimation}>
             <img src={DevImage} alt="" />
 
             <div className="home-button">
@@ -59,7 +72,7 @@ const Home = () => {
                 My Resume
               </a>
             </div>
-          </Bounce>
+          </animated.div>
         </div>
       </div>
     </>
