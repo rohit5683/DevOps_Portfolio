@@ -37,13 +37,12 @@ const Home = () => {
         <div className="container home-content">
           <animated.div style={zoomAnimation}>
             <h1>
-              Hi, I'am a
+              Hi, I am a
               <Typewriter
                 options={{
                   strings: [
-                    "React Developer!",
-                    "Full Stack Developer!",
-                    "MERN Stack Developer!",
+                    "DevOps Engineer",
+                    "AWS Certified Cloud Practitioner",
                   ],
                   autoStart: true,
                   loop: true,
