@@ -24,6 +24,9 @@ jobs:
     - name: Install dependencies
       run: npm install --legacy-peer-deps # Corrected case
 
+    - name: update browser list
+      run: npx update-browserslist-db@latest # Corrected case
+
     - name: Build Project
       run: npm run build # Fixed syntax
 
