@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.4fba16df.css",
-    "main.js": "/static/js/main.6a824f6f.js",
-    "static/js/787.9e9f4ffd.chunk.js": "/static/js/787.9e9f4ffd.chunk.js",
-    "static/media/Project_3.png": "/static/media/Project_3.4a02feba879a8bc262a1.png",
-    "static/media/Project_2.png": "/static/media/Project_2.2982d1323695efeb1f45.png",
-    "static/media/Project_1.png": "/static/media/Project_1.d1f8677b3c55b7cf3046.png",
-    "static/media/Contact.jpg": "/static/media/Contact.35c770dce8edc3078da8.jpg",
-    "static/media/Profile.png": "/static/media/Profile.72e02ab2c5b9b4b467bd.png",
-    "static/media/Rohit Vishwakarma.pdf": "/static/media/Rohit Vishwakarma.df3f2a45f8d7cfe22cd8.pdf",
-    "static/media/Home.png": "/static/media/Home.9234eb82a08b417f3553.png",
-    "index.html": "/index.html",
-    "main.4fba16df.css.map": "/static/css/main.4fba16df.css.map",
-    "main.6a824f6f.js.map": "/static/js/main.6a824f6f.js.map",
-    "787.9e9f4ffd.chunk.js.map": "/static/js/787.9e9f4ffd.chunk.js.map"
+    "main.css": "/DevOps_Portfolio/static/css/main.4fba16df.css",
+    "main.js": "/DevOps_Portfolio/static/js/main.fc9ed90f.js",
+    "static/js/787.9e9f4ffd.chunk.js": "/DevOps_Portfolio/static/js/787.9e9f4ffd.chunk.js",
+    "static/media/Project_3.png": "/DevOps_Portfolio/static/media/Project_3.4a02feba879a8bc262a1.png",
+    "static/media/Project_2.png": "/DevOps_Portfolio/static/media/Project_2.2982d1323695efeb1f45.png",
+    "static/media/Project_1.png": "/DevOps_Portfolio/static/media/Project_1.d1f8677b3c55b7cf3046.png",
+    "static/media/Contact.jpg": "/DevOps_Portfolio/static/media/Contact.35c770dce8edc3078da8.jpg",
+    "static/media/Profile.png": "/DevOps_Portfolio/static/media/Profile.72e02ab2c5b9b4b467bd.png",
+    "static/media/Rohit Vishwakarma.pdf": "/DevOps_Portfolio/static/media/Rohit Vishwakarma.df3f2a45f8d7cfe22cd8.pdf",
+    "static/media/Home.png": "/DevOps_Portfolio/static/media/Home.9234eb82a08b417f3553.png",
+    "index.html": "/DevOps_Portfolio/index.html",
+    "main.4fba16df.css.map": "/DevOps_Portfolio/static/css/main.4fba16df.css.map",
+    "main.fc9ed90f.js.map": "/DevOps_Portfolio/static/js/main.fc9ed90f.js.map",
+    "787.9e9f4ffd.chunk.js.map": "/DevOps_Portfolio/static/js/787.9e9f4ffd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4fba16df.css",
-    "static/js/main.6a824f6f.js"
+    "static/js/main.fc9ed90f.js"
   ]
 }
